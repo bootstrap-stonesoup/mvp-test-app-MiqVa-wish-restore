@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: rhtap-demo-component-hhud
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/rhtap-demo-dev-xugf-tenant/mvp-test-app/rhtap-demo-component-hhud@sha256:dd8f99a06025f250da2786da9a762794016a9147c3b25d9fe4e452d887a6014c
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
